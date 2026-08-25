@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Mi primer Javascript</h1>
+        <p id = "mensaje">Haz clic en el boton para cambiar el mensaje</p>
+        <button onclick = "cambiaTexto()">Haz click Aqui!</button>
+        <h2>Listado de tareas</h2>
+        <button onclick = "generaraLista()">Mostrar Lista</button>
+        <ul id="Lista-tareas"></ul> 
+        <script>
+            function cambiaTexto(){
+                let parrafo = document.getElementById("mensaje")
+                parrafo.innerHTML = "<h2> hola has usado javascript con exito!!!!<h2>"
+                parrafo.style.color = "orange"
+            }
+            function generaraLista(){
+                const tareas = ["Aprender HTML! ", "Practicar CSS", "Practicar Javascript"]
+                const contenedorLista = document.getElementById("Lista-tareas")
+                contenedorLista.innerHTML = ""
+
+                for(let i = 0;i<tareas.length; i++){
+                    let nuevoElemento = document.createElement("li")
+                    nuevoElemento.textContent = tareas[i];
+
+                    contenedorLista.appendChild(nuevoElemento)
+                    console.log(i)
+                }
+            }
+        </script>
+    </body>
+</html>
