@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSports Arena Manager</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>eSports Arena Manager</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="torneos.html">Torneos</a></li>
+                <li><a href="detalle-torneo.html">Detalle de torneo</a></li>
+                <li><a href="inscripcion.html">Inscripción</a></li>
+                <li><a href="equipo.html">Gestión de equipo</a></li>
+                <li><a href="perfil.html">Perfil de jugador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Perfil de jugador</h2>
+
+            <form id="formulario-perfil" novalidate>
+                <div>
+                    <label for="apodo">Apodo</label>
+
+                    <input
+                        type="text"
+                        id="apodo"
+                        name="apodo"
+                        autocomplete="nickname"
+                    >
+
+                    <p>El apodo debe tener al menos 3 caracteres y no incluir espacios.</p>
+                    <p id="error-apodo" class="mensaje-error"></p>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico</label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        autocomplete="email"
+                    >
+
+                    <p>Ingresa un correo electrónico válido.</p>
+                    <p id="error-correo" class="mensaje-error"></p>
+                </div>
+
+                <div>
+                    <label for="contrasena">Contraseña</label>
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        autocomplete="new-password"
+                    >
+
+                    <p>La contraseña debe tener al menos 6 caracteres.</p>
+                    <p id="error-contrasena" class="mensaje-error"></p>
+                </div>
+
+                <div>
+                    <label for="confirmar-contrasena">Confirmar contraseña</label>
+
+                    <input
+                        type="password"
+                        id="confirmar-contrasena"
+                        name="confirmar-contrasena"
+                        autocomplete="new-password"
+                    >
+
+                    <p>La confirmación debe coincidir con la contraseña.</p>
+                    <p id="error-confirmar-contrasena" class="mensaje-error"></p>
+                </div>
+
+                <button type="submit">Guardar perfil</button>
+
+                <p id="mensaje-perfil"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Datos del jugador</h2>
+
+            <article id="ficha-jugador">
+                <!-- JavaScript mostrará aquí los datos guardados. -->
+            </article>
+        </section>
+
+        <section>
+            <h2>Equipos del jugador</h2>
+
+            <div id="equipos-jugador">
+                <!-- JavaScript mostrará aquí los equipos a los que pertenece. -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Historial de torneos</h2>
+
+            <div id="historial-torneos">
+                <!-- JavaScript mostrará aquí el historial de torneos. -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Estadísticas</h2>
+
+            <div id="estadisticas-jugador">
+                <!-- JavaScript mostrará aquí victorias y derrotas. -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Sanciones</h2>
+
+            <div id="sanciones-jugador">
+                <!-- JavaScript mostrará aquí sanciones vigentes o cumplidas. -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>eSports Arena Manager</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

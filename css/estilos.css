@@ -1,0 +1,256 @@
+/* ============================================================
+   VARIABLES CSS
+   ============================================================ */
+
+:root {
+    --fondo: #0F1923;
+    --superficie: #1B2733;
+    --primario: #FF4655;
+    --acento: #ECE8E1;
+    --texto: #ECE8E1;
+    --error: #FF8A00;
+    --radio-borde: 8px;
+    --fuente: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ============================================================
+   REINICIO BÁSICO
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   ESTILOS GENERALES
+   ============================================================ */
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   CABECERA Y NAVEGACIÓN
+   ============================================================ */
+
+header {
+    background-color: var(--superficie);
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 16px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+   ============================================================ */
+
+main {
+    padding: 24px;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto 24px;
+    padding: 24px;
+    background-color: var(--superficie);
+    border-radius: var(--radio-borde);
+}
+
+section h2 {
+    margin-bottom: 12px;
+}
+
+/* ============================================================
+   VIDEO
+   ============================================================ */
+
+iframe {
+    max-width: 100%;
+    border: 0;
+}
+
+/* ============================================================
+   PIE DE PÁGINA
+   ============================================================ */
+
+footer {
+    padding: 20px;
+    text-align: center;
+
+}
+    /* ============================================================
+   FORMULARIOS
+   ============================================================ */
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+form div {
+    display: grid;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--acento);
+    border-radius: var(--radio-borde);
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente);
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--acento);
+    outline-offset: 2px;
+}
+
+form p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+button {
+    padding: 10px 16px;
+    border: 0;
+    border-radius: var(--radio-borde);
+    background-color: var(--acento);
+    color: var(--fondo);
+    font-family: var(--fuente);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.9);
+    }
+
+    /* ============================================================
+   TARJETAS DE TORNEOS
+   ============================================================ */
+
+#contenedor-torneos,
+#torneos-destacados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.tarjeta-torneo {
+    display: grid;
+    gap: 8px;
+    padding: 18px;
+    background-color: var(--fondo);
+    border-radius: var(--radio-borde);
+}
+
+.tarjeta-torneo h3 {
+    margin-bottom: 4px;
+}
+
+.estado-en-curso {
+    color: var(--primario);
+    font-weight: 600;
+    }
+
+#estado-vacio {
+    margin-top: 16px;
+    color: var(--error);
+    font-weight: 600;
+}
+
+.enlace-detalle {
+    padding: 10px;
+    border-radius: var(--radio-borde);
+    background-color: var(--acento);
+    color: var(--fondo);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.enlace-detalle:hover {
+    filter: brightness(0.9);
+}
+#informacion-torneo,
+#participantes-inscritos,
+#premios-torneo {
+    display: grid;
+    gap: 8px;
+}
+
+#participantes-inscritos ul,
+#premios-torneo ul {
+    display: grid;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+#llaves-partidas {
+    display: grid;
+    gap: 16px;
+}
+
+#llaves-partidas article {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    background-color: var(--fondo);
+    border-radius: var(--radio-borde);
+}
+
+#tabla-posiciones table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-posiciones th,
+#tabla-posiciones td {
+    padding: 12px;
+    border-bottom: 1px solid var(--fondo);
+    text-align: left;
+}
+
+#tabla-posiciones th {
+    background-color: var(--fondo);
+}
+.mensaje-error {
+    color: var(--error);
+    font-weight: 600;
+}
+
+#mensaje-equipo {
+    margin-top: 12px;
+    font-weight: 600;
+}

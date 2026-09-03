@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSports Arena Manager</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>eSports Arena Manager</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="torneos.html">Torneos</a></li>
+                <li><a href="detalle-torneo.html">Detalle de torneo</a></li>
+                <li><a href="inscripcion.html">Inscripción</a></li>
+                <li><a href="equipo.html">Gestión de equipo</a></li>
+                <li><a href="perfil.html">Perfil de jugador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Gestión de equipo</h2>
+
+            <form id="formulario-equipo" novalidate>
+                <div>
+                    <label for="nombre-equipo">Nombre del equipo</label>
+
+                    <input
+                        type="text"
+                        id="nombre-equipo"
+                        name="nombre-equipo"
+                        autocomplete="organization"
+                        required
+                    >
+
+                    <p>El nombre del equipo es obligatorio.</p>
+                    <p id="error-nombre-equipo" class="mensaje-error"></p>
+                </div>
+
+                <div>
+                    <label for="juego-principal">Juego principal</label>
+
+                    <select id="juego-principal" name="juego-principal" required>
+                        <option value="">Selecciona un juego</option>
+                    </select>
+
+                    <p>Los juegos habilitados se cargarán mediante JavaScript.</p>
+                    <p id="error-juego-principal" class="mensaje-error"></p>
+                </div>
+
+                <div>
+                    <label for="capitan">Capitán del equipo</label>
+
+                    <select id="capitan" name="capitan" required>
+                        <option value="">Selecciona un capitán</option>
+                    </select>
+
+                    <p>El capitán es obligatorio.</p>
+                    <p id="error-capitan" class="mensaje-error"></p>
+                </div>
+
+                <button type="submit">Crear equipo</button>
+
+                <p id="mensaje-equipo"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Integrantes del equipo</h2>
+
+            <div>
+                <label for="jugador">Agregar jugador</label>
+
+                <select id="jugador" name="jugador">
+                    <option value="">Selecciona un jugador</option>
+                </select>
+
+                <button type="button" id="boton-agregar-jugador">
+                    Agregar jugador
+                </button>
+
+                <p id="error-jugador" class="mensaje-error"></p>
+            </div>
+
+            <div id="lista-integrantes">
+                <!-- JavaScript mostrará aquí los integrantes. -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>eSports Arena Manager</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

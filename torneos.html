@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos | eSports Arena Manager</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>eSports Arena Manager</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="torneos.html">Torneos</a></li>
+                <li><a href="detalle-torneo.html">Detalle de torneo</a></li>
+                <li><a href="inscripcion.html">Inscripción</a></li>
+                <li><a href="equipo.html">Gestión de equipo</a></li>
+                <li><a href="perfil.html">Perfil de jugador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section>
+        <h2>Listado de torneos</h2>
+
+        <form id="formulario-filtros">
+            <div>
+                <label for="filtro-juego">Juego</label>
+
+                <select id="filtro-juego" name="filtro-juego">
+                    <option value="">Todos los juegos</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="filtro-estado">Estado</label>
+
+                <select id="filtro-estado" name="filtro-estado">
+                    <option value="">Todos los estados</option>
+                    <option value="abierto">Abierto</option>
+                    <option value="en-curso">En curso</option>
+                    <option value="finalizado">Finalizado</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="fecha-inicial">Fecha inicial</label>
+
+                <input
+                    type="date"
+                    id="fecha-inicial"
+                    name="fecha-inicial"
+                >
+            </div>
+
+            <div>
+                <label for="fecha-final">Fecha final</label>
+
+                <input
+                    type="date"
+                    id="fecha-final"
+                    name="fecha-final"
+                >
+            </div>
+
+            <div>
+                <label for="buscar-nombre">Buscar por nombre</label>
+
+                <input
+                    type="search"
+                    id="buscar-nombre"
+                    name="buscar-nombre"
+                    placeholder="Escribe el nombre del torneo"
+                >
+            </div>
+
+            <button type="submit">Aplicar filtros</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Torneos disponibles</h2>
+
+        <div id="contenedor-torneos">
+            <!-- JavaScript mostrará aquí las tarjetas de torneos. -->
+        </div>
+
+        <div id="estado-vacio">
+            <!-- JavaScript mostrará aquí un mensaje cuando no existan resultados. -->
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <p>eSports Arena Manager.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

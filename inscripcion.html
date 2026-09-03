@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSports Arena Manager</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>eSports Arena Manager</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="torneos.html">Torneos</a></li>
+                <li><a href="detalle-torneo.html">Detalle de torneo</a></li>
+                <li><a href="inscripcion.html">Inscripción</a></li>
+                <li><a href="equipo.html">Gestión de equipo</a></li>
+                <li><a href="perfil.html">Perfil de jugador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Inscripción a torneo</h2>
+
+            <form id="formulario-inscripcion" novalidate>
+                <div>
+                    <label for="tipo-participante">Tipo de participante</label>
+
+                    <select id="tipo-participante" name="tipo-participante">
+                        <option value="">Selecciona una opción</option>
+                        <option value="jugador">Jugador</option>
+                        <option value="equipo">Equipo</option>
+                    </select>
+
+                    <p>Selecciona si participarás como jugador o como equipo.</p>
+                    <p id="error-tipo-participante" class="mensaje-error"></p>
+                </div>
+
+                <div>
+                    <label for="equipo">Equipo propio</label>
+
+                    <select id="equipo" name="equipo">
+                        <option value="">Selecciona un equipo</option>
+                    </select>
+
+                    <p>Los equipos disponibles se cargarán mediante JavaScript.</p>
+                    <p id="error-equipo-inscripcion" class="mensaje-error"></p>
+                </div>
+
+                <div>
+                    <h3>Requisitos del torneo</h3>
+
+                    <div id="requisitos-torneo">
+                        <!-- JavaScript mostrará aquí los requisitos del torneo. -->
+                    </div>
+                </div>
+
+                <p id="error-inscripcion" class="mensaje-error"></p>
+
+                <button type="submit">Confirmar inscripción</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Confirmación de inscripción</h2>
+
+            <div id="confirmacion-inscripcion">
+                <!-- JavaScript mostrará aquí el detalle de la inscripción. -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>eSports Arena Manager</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
