@@ -254,3 +254,10 @@ button:hover {
     margin-top: 12px;
     font-weight: 600;
 }
+.imagen-portada {
+    width: 100%;
+    max-width: 1100px;
+    display: block;
+    margin: 16px auto 0;
+    border-radius: var(--radio-borde);
+}
