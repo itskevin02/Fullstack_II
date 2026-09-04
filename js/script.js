@@ -845,3 +845,91 @@ if (formularioPerfil !== null) {
         }
     });
 }
+const equiposJugador = [
+    equipos[0],
+    equipos[1]
+];
+
+const historialTorneosJugador = [
+    {
+        torneo: "Torneo 1",
+        resultado: "Participación registrada"
+    },
+    {
+        torneo: "Torneo 2",
+        resultado: "Participación registrada"
+    }
+];
+
+const estadisticasJugador = {
+    victorias: 12,
+    derrotas: 5
+};
+
+const sancionesJugador = [
+    {
+        estado: "Cumplida",
+        descripcion: "Sanción 1"
+    }
+];
+
+const contenedorEquiposJugador = document.getElementById("equipos-jugador");
+
+if (contenedorEquiposJugador !== null) {
+    const listaEquipos = document.createElement("ul");
+
+    equiposJugador.forEach(function (equipo) {
+        const elemento = document.createElement("li");
+
+        elemento.textContent = `${equipo.nombre} - ${equipo.juego}`;
+
+        listaEquipos.appendChild(elemento);
+    });
+
+    contenedorEquiposJugador.appendChild(listaEquipos);
+}
+
+const contenedorHistorial = document.getElementById("historial-torneos");
+
+if (contenedorHistorial !== null) {
+    const listaHistorial = document.createElement("ul");
+
+    historialTorneosJugador.forEach(function (registro) {
+        const elemento = document.createElement("li");
+
+        elemento.textContent = `${registro.torneo}: ${registro.resultado}`;
+
+        listaHistorial.appendChild(elemento);
+    });
+
+    contenedorHistorial.appendChild(listaHistorial);
+}
+
+const contenedorEstadisticas = document.getElementById("estadisticas-jugador");
+
+if (contenedorEstadisticas !== null) {
+    const victorias = document.createElement("p");
+    const derrotas = document.createElement("p");
+
+    victorias.textContent = `Victorias: ${estadisticasJugador.victorias}`;
+    derrotas.textContent = `Derrotas: ${estadisticasJugador.derrotas}`;
+
+    contenedorEstadisticas.appendChild(victorias);
+    contenedorEstadisticas.appendChild(derrotas);
+}
+
+const contenedorSanciones = document.getElementById("sanciones-jugador");
+
+if (contenedorSanciones !== null) {
+    const listaSanciones = document.createElement("ul");
+
+    sancionesJugador.forEach(function (sancion) {
+        const elemento = document.createElement("li");
+
+        elemento.textContent = `${sancion.estado}: ${sancion.descripcion}`;
+
+        listaSanciones.appendChild(elemento);
+    });
+
+    contenedorSanciones.appendChild(listaSanciones);
+}
